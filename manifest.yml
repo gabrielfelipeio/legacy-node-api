@@ -3,18 +3,11 @@ applications:
     memory: 512M
     instances: 1
     disk_quota: 1024M
-    name: elawlab-pj002
+    name: elawlab-webhooks-dev
     routes:
-      - route: elawlab-pj002.mybluemix.net/
-      - route: elawlab-pj002.mybluemix.net/api/Guides/request
-      - route: elawlab-pj002.mybluemix.net/api/Guides/exportInvoice
-      - route: elawlab-pj002.mybluemix.net/api/Guides/testRequest
-      - route: elawlab-pj002.mybluemix.net/api/Guides/billings
+      - route: elawlab-webhooks-dev.mybluemix.net/
+      - route: elawlab-webhooks-dev.mybluemix.net/api/SolicitarIntegracao
     health-check-type: process
     service:
-      - MDB-PJ002
+      - MDB-WEBHOOKS
     env:
-      URL_API_SERVICES: "https://elawlab-api-services.elaw.com.br/api/extractText"
-      URL_BILLINGS: "https://elawlab-billings.mybluemix.net/api/Billings/returnDatas"
-      TIME_EXPORT_BILLINGS: 21600000
-      TIME_RETURN_BILLINGS: 21600000

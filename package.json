@@ -1,34 +1,32 @@
 {
-    "name": "pj002",
+    "name": "WEBHOOKS",
     "version": "1.0.0",
-    "description": "Este projeto tem como finalidade receber guias de pagamento do sistema Elaw e obter informacoes importantes para o pagamento dos devidos documentos.",
+    "description": "Este projeto tem como finalidade atraves de um codigo recebido retorna a URL do serviço.",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
         "dev": "NODE_ENV=dev nodemon server.js",
-        "documentation": "rm -rf documentation/api-doc && apidoc -i documentation/ -o documentation/api-doc"
+        "documentation": "apidoc -i app/ -o documentation/api-doc"
     },
     "keywords": [],
     "author": "Leonardo Avelino && Gabriel Felipe",
     "license": "ISC",
     "dependencies": {
-        "body-parser": "^1.18.3",
-        "cfenv": "^1.2.0",
+        "cfenv": "^1.2.2",
         "consign": "^0.1.6",
         "cors": "^2.8.5",
-        "dotenv": "^6.2.0",
-        "express": "^4.16.4",
-        "file-base64": "^1.0.0",
-        "json2csv": "^4.5.2",
-        "log4js": "^3.0.6",
-        "mongoose": "^5.4.16",
+        "dotenv": "^8.0.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "log4js": "^4.5.1",
+        "mongoose": "^5.6.8",
         "multer": "^1.4.2",
-        "pdf-to-text": "0.0.7",
-        "request": "^2.88.0",
-        "rimraf": "^2.6.3",
-        "shelljs": "^0.8.3"
+        "passport": "^0.4.1",
+        "passport-jwt": "^4.0.0"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    },
     "engines": {
         "node": "10.9.0"
     },

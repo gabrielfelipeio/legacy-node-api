@@ -16,7 +16,6 @@ module.exports = function() {
     app.use(bodyParser.urlencoded({
         extended: true
     }));
-    app.use("/documentation", express.static("./documentation/api-doc"));
 
     consign({
             cwd: 'app'
@@ -24,6 +23,6 @@ module.exports = function() {
         .include('routes')
         .into(app);
 
-    app.get('/', (req, res) => res.status(200).send('Payment Guides API - Elaw LAB - PRD'));
+    app.get('/', (req, res) => res.status(200).send('Webhooks API - Elaw LAB - HM'));
     return app;
 }
