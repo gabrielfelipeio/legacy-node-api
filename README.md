@@ -1,1 +1,1 @@
-# legacy-express-api
+# Node.js API structure example
